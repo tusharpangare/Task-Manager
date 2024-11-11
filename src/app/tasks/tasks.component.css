@@ -1,0 +1,122 @@
+/* Container for tasks */
+.tasks-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Header for the task list */
+  .tasks-header {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Task list container */
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Individual task card */
+  .task-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Delete button */
+  .delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e43d3d;
+  }
+  
+  .delete-btn:focus {
+    outline: none;
+  }
+  
+  /* Task Title */
+  .task-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Task Description */
+  .task-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  /* Task Priority Styling */
+  .task-priority {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  /* Task Due Date Styling */
+  .task-dueDate {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  /* Task Status Section */
+  .task-status {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-status label {
+    margin-right: 8px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .task-status input[type="checkbox"] {
+    margin-left: 8px;
+  }
+  
+  /* Add some spacing between tasks */
+  .task-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styling for different priorities */
+  .high {
+    color: red;
+  }
+  
+  .medium {
+    color: orange;
+  }
+  
+  .low {
+    color: green;
+  }
+  

@@ -1,0 +1,38 @@
+<div class="tasks-container">
+    <!-- Add New Task Button -->
+    <app-add-task></app-add-task>
+
+    <!-- Task List -->
+    <h2 class="tasks-header">Tasks List</h2>
+    <div class="task-list">
+        <div *ngFor="let task of tasks" class="task-item">
+            <div class="task-card">
+                <!-- Delete Button -->
+                <button (click)="onDelete(task)" class="delete-btn">Delete</button>
+
+                <!-- Task Title -->
+                <h3 class="task-title"
+                    [ngStyle]="{'text-decoration': task.status === 'Complete' ? 'line-through' : '' }">
+                    {{ task.title }}
+                </h3>
+
+                <!-- Task Description -->
+                <p class="task-description"><strong>Description:</strong> {{ task.description }}</p>
+
+                <!-- Priority with ngClass -->
+                <p class="task-priority" [ngClass]="getPriorityClass(task.priority)">
+                    <strong>Priority:</strong> {{ task.priority }}
+                </p>
+
+                <!-- Due Date -->
+                <p class="task-dueDate"><strong>Due Date:</strong> {{ task.dueDate | date }}</p>
+
+                <!-- Mark as Done with checkbox -->
+                <div class="task-status">
+                    <label for="status"><strong>Mark as Done</strong></label>
+                    <input type="checkbox" [checked]="task.status === 'Complete'" (change)="toggleStatus(task)" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
